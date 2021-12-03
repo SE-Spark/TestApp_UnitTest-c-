@@ -9,17 +9,9 @@ namespace DAL.Functions
 {
     public class LoginFuncs
     {
-        public static void ValidateUserParams(Login lg)
+        public static Boolean ValidateUserParams(Login lg)
         {
-            if (string.IsNullOrWhiteSpace(lg.Username))
-            {
-                throw new ArgumentException("invalid username,cannot be null", "Username");
-            }
-            else if (string.IsNullOrWhiteSpace(lg.Password))
-            {
-                throw new ArgumentException("invalid Password,cannot be null", "Password");
-            }
-
+            return (!string.IsNullOrWhiteSpace(lg.Username) && !string.IsNullOrWhiteSpace(lg.Password));
         }
     }
 }

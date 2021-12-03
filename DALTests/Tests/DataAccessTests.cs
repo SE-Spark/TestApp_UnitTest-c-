@@ -17,7 +17,7 @@ namespace DALTests.Tests
             //arrange
             Login newLogins = new Login { Username = "peter", Password = "s@am!123" };
             //act
-            LoginFuncs.ValidateUserParams(newLogins);
+           Assert.True(LoginFuncs.ValidateUserParams(newLogins));
             
         }
         [Theory]
@@ -25,10 +25,10 @@ namespace DALTests.Tests
         [InlineData("", "keli", "Username")]
         public void ValidateUserParams_shouldFail(string username,string password,string param)
         {
-            Login newLogins = new Login { Username = username, Password = password };            
-            
+            Login newLogins = new Login { Username = username, Password = password };
+            var result = LoginFuncs.ValidateUserParams(newLogins);
             //assert
-            Assert.Throws<ArgumentException>(param,() => LoginFuncs.ValidateUserParams(newLogins));
+            Assert.False(result);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using DAL.Interfaces;
+﻿using DAL.Functions;
+using DAL.Interfaces;
 using DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,8 @@ namespace DAL.Utilities
 
         public  int Validate(Login lg)
         {
-            throw new NotImplementedException();
+            LoginFuncs.ValidateUserParams(lg);
+            return 1;
         }
 
         public int Update(Login lg)
