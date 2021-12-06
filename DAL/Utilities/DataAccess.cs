@@ -28,9 +28,9 @@ namespace DAL.Utilities
         {
             throw new NotImplementedException();
         }
-
         public int Update(T entity)
         {
+            
             throw new NotImplementedException();
         }
     }

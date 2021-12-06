@@ -21,9 +21,9 @@ namespace DALTests.Tests
             
         }
         [Theory]
-        [InlineData("mery","","Password")]
-        [InlineData("", "keli", "Username")]
-        public void ValidateUserParams_shouldFail(string username,string password,string param)
+        [InlineData("mery","")]
+        [InlineData("", "keli")]
+        public void ValidateUserParams_shouldFail(string username,string password)
         {
             Login newLogins = new Login { Username = username, Password = password };
             var result = LoginFuncs.ValidateUserParams(newLogins);
