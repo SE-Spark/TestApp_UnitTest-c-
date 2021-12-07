@@ -7,6 +7,7 @@ using Dapper;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using DAL.Interfaces;
 
 namespace DAL.Database
 {
@@ -26,7 +27,7 @@ namespace DAL.Database
 
         public static int SaveData<T>(string sql, T data)
         {
-            using (IDbConnection cnn = new SqlConnection("Server=(local)\\SQL2019;Initial Catalog=TaskAppDb;User Id=superadmin;Password=samuel4300;"))
+            using (IDbConnection cnn = new SqlConnection(GetConnectionString()))
             {
                 return cnn.Execute(sql,data);
             }

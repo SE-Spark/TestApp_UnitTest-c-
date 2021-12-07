@@ -130,14 +130,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\EmployeePro.cs" />
     <Compile Include="BusinessLogic\EmployeeProcessor.cs" />
     <Compile Include="Database\DatabaseContext.cs" />
     <Compile Include="Database\DatabaseContextFactory.cs" />
+    <Compile Include="Database\SqlDataAcces.cs" />
     <Compile Include="Database\SqlDataAccess.cs" />
     <Compile Include="Functions\LoginFuncs.cs" />
     <Compile Include="Interfaces\IDataAccess.cs" />
+    <Compile Include="Interfaces\IEmployeePro.cs" />
     <Compile Include="Interfaces\IMath.cs" />
     <Compile Include="Interfaces\IProcessLogins.cs" />
+    <Compile Include="Interfaces\ISqlDataAccess.cs" />
     <Compile Include="Migrations\20211203131936_first.cs" />
     <Compile Include="Migrations\20211203131936_first.designer.cs">
       <DependentUpon>20211203131936_first.cs</DependentUpon>
